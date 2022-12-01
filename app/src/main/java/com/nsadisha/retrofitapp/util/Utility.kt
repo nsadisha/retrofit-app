@@ -2,8 +2,8 @@ package com.nsadisha.retrofitapp.util
 
 import android.app.AlertDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.util.Log
+import android.widget.Toast
 import kotlin.system.exitProcess
 
 
@@ -18,12 +18,16 @@ class Utility {
             dialog.setCancelable(false)
             dialog.setTitle("Error")
             dialog.setMessage(string)
-            dialog.setPositiveButton("Close", DialogInterface.OnClickListener { _, _ ->
+            dialog.setPositiveButton("Close") { _, _ ->
                 exitProcess(-1)
-            })
+            }
 
             val alert: AlertDialog = dialog.create()
             alert.show()
+        }
+
+        fun showToast(context: Context, string: String){
+            Toast.makeText(context, string, Toast.LENGTH_SHORT).show()
         }
     }
 }
