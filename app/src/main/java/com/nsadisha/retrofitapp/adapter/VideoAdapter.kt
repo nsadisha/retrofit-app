@@ -7,10 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.nsadisha.retrofitapp.R
 import com.nsadisha.retrofitapp.api.model.NetworkVideo
+import com.nsadisha.retrofitapp.model.DevByteVideo
 
 
 class VideoAdapter: RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
-    private var videos = emptyList<NetworkVideo>()
+    private var videos = emptyList<DevByteVideo>()
     inner class VideoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
@@ -29,7 +30,7 @@ class VideoAdapter: RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
         return videos.size
     }
 
-    fun setData(_videos: List<NetworkVideo>){
+    fun setData(_videos: List<DevByteVideo>){
         videos = _videos
         notifyDataSetChanged()
     }
