@@ -1,4 +1,4 @@
-package com.nsadisha.retrofitapp.model
+package com.nsadisha.retrofitapp.api.model
 
 data class NetworkVideo(
     val title: String,

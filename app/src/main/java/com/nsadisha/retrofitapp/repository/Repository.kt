@@ -1,7 +1,7 @@
 package com.nsadisha.retrofitapp.repository
 
 import com.nsadisha.retrofitapp.api.DevBytesService
-import com.nsadisha.retrofitapp.model.NetworkVideoContainer
+import com.nsadisha.retrofitapp.api.model.NetworkVideoContainer
 import retrofit2.Response
 import javax.inject.Inject
 

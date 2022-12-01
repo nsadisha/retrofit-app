@@ -1,6 +1,6 @@
 package com.nsadisha.retrofitapp.api
 
-import com.nsadisha.retrofitapp.model.NetworkVideoContainer
+import com.nsadisha.retrofitapp.api.model.NetworkVideoContainer
 import retrofit2.Response
 import retrofit2.http.GET
 

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.nsadisha.retrofitapp.R
-import com.nsadisha.retrofitapp.model.NetworkVideo
+import com.nsadisha.retrofitapp.api.model.NetworkVideo
 
 
 class VideoAdapter: RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {

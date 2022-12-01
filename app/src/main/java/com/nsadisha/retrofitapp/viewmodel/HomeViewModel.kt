@@ -3,8 +3,8 @@ package com.nsadisha.retrofitapp.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nsadisha.retrofitapp.model.NetworkVideo
-import com.nsadisha.retrofitapp.model.NetworkVideoContainer
+import com.nsadisha.retrofitapp.api.model.NetworkVideo
+import com.nsadisha.retrofitapp.api.model.NetworkVideoContainer
 import com.nsadisha.retrofitapp.repository.Repository
 import com.nsadisha.retrofitapp.util.Utility.Companion.p
 import dagger.hilt.android.lifecycle.HiltViewModel
