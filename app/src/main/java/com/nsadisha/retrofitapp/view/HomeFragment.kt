@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nsadisha.retrofitapp.adapter.VideoAdapter
 import com.nsadisha.retrofitapp.databinding.FragmentHomeBinding
-import com.nsadisha.retrofitapp.util.Utility.Companion.p
 import com.nsadisha.retrofitapp.util.Utility.Companion.showErrorAlert
 import com.nsadisha.retrofitapp.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,12 +31,7 @@ class HomeFragment : Fragment() {
         setupRecyclerview()
 
         viewModel.videos.observe(viewLifecycleOwner) {
-            if (it.isSuccessful) {
-                val res = it.body()
-                adapter.setData(res!!.videos)
-            } else {
-                p("Unsuccessful")
-            }
+            adapter.setData(it)
         }
 
         viewModel.isLoadingCompleted.observe(viewLifecycleOwner) {
