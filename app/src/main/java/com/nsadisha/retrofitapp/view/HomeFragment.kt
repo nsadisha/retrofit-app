@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nsadisha.retrofitapp.adapter.VideoAdapter
 import com.nsadisha.retrofitapp.databinding.FragmentHomeBinding
-import com.nsadisha.retrofitapp.util.Utility.Companion.showErrorAlert
+import com.nsadisha.retrofitapp.util.Utility.Companion.showToast
 import com.nsadisha.retrofitapp.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,7 +39,8 @@ class HomeFragment : Fragment() {
         }
 
         viewModel.onErrorOccurred.observe(viewLifecycleOwner){
-            if(it) showErrorAlert(requireContext(), "Error loading data!")
+            if(it) showToast(requireContext(), "Error loading data!")
+//            if(it) showErrorAlert(requireContext(), "Error loading data!")
         }
 
         return binding.root
