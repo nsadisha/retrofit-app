@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nsadisha.retrofitapp.model.DevByteVideo
 import com.nsadisha.retrofitapp.repository.Repository
-import com.nsadisha.retrofitapp.util.Utility.Companion.p
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -35,7 +34,6 @@ class HomeViewModel @Inject constructor(
             isLoadingCompleted.value = true
         }catch (e: Exception){
             onErrorOccurred.value = true
-            p(e)
         }
     }
 
